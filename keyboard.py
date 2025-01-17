@@ -25,3 +25,10 @@ Tasdiqlash = InlineKeyboardMarkup(
         [InlineKeyboardButton(text='tasdiqlash ✅', callback_data='tasdiqlash'), InlineKeyboardButton(text='ortga ⬅️', callback_data='zadnin')]
     ]
 )
+
+
+Tolov = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text='tasdiqlash ✅', callback_data='bajarish'), InlineKeyboardButton(text='bekor qilish ❌', callback_data='bekor')]
+    ]
+)

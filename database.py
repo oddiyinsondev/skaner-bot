@@ -133,6 +133,20 @@ def get_user(telegram_id: int) -> bool:
 
 
 
+def get_users():
+    conn = sqlite3.connect('apteka.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('SELECT * FROM users')
+    user = cursor.fetchall()
+    conn.close()
+    users = ""
+    for u in user:
+        users += f"{u[1]} -> {u[2]}\n"
+    return users
+
+
+
 def hisobdagi_summa(telegram_id: int) -> bool:
     conn = sqlite3.connect('apteka.db')
     cursor = conn.cursor()
